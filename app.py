@@ -50,9 +50,9 @@ if uploaded_file is not None:
 
     # Optional filtering by 업체명.2
     st.subheader("Filter by Company Name")
-    company_options = df2['업체명.2'].unique().tolist()
+    company_options = df2['업체명'].unique().tolist()
     selected_company = st.multiselect("Select company names", company_options, default=company_options)
-    filtered_df = df2[df2['업체명.2'].isin(selected_company)]
+    filtered_df = df2[df2['업체명'].isin(selected_company)]
 
     # Display filtered data
     st.subheader("Filtered Data")
